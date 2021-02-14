@@ -6,8 +6,7 @@ public:
         for(int i = k, len = nums.size(); i < len; i++) {
             sum -= nums[i - k];
             sum += nums[i];
-            if(avg < sum / k)
-                avg = sum / k;
+            avg = max(avg, sum / k);
         }
 
         return avg;
